@@ -1,0 +1,366 @@
+html {
+    font-size: 18px; /* Taille de base augmentée */
+  }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #153726;
+    line-height: 1.55;
+  }
+  
+  /* HEADER */
+  .lizy-header {
+    min-height: 100vh;
+    background: #035e48;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .lizy-logo {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    position: absolute;
+    top: 30px;
+    left: 55px;
+    z-index: 2;
+  }
+  .lizy-logo .logo-ai {
+    color: #ffff99;
+    font-weight: bold;
+  }
+  .lizy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+    text-align: center;
+    position: relative;
+  }
+  .lizy-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    line-height: 1.12;
+  }
+  .lizy-content .highlight {
+    color: #f8f98a;
+    background: none;
+    font-weight: 900;
+  }
+  .lizy-eyes {
+    position: absolute;
+    right: 32vw;
+    top: 0px;
+    transform: rotate(-12deg);
+  }
+  .lizy-desc {
+    margin: 35px 0 0 0;
+    font-size: 1.1rem;
+    color: #fff;
+    opacity: 0.94;
+  }
+  .lizy-test-call {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 38px;
+    gap: 20px;
+  }
+  .lizy-test-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 8px;
+  }
+  .lizy-call-btn {
+    background: #90b8ff;
+    color: #fff;
+    border-radius: 26px;
+    padding: 16px 46px 10px 46px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 22px #0002;
+    text-align: center;
+    transition: background 0.15s;
+  }
+  .lizy-call-btn:hover {
+    background: #6c9cff;
+  }
+  .call-btn-label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    opacity: 0.85;
+  }
+  .call-btn-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Footer */
+  .lizy-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff87b;
+    padding: 10px 0 7px 0;
+    color: #063800;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    border-top: 2px solid #eee;
+  }
+  .footer-logo {
+    height: 22px;
+    margin-left: 12px;
+  }
+  
+  /* Steps Section */
+  .step-section {
+    max-width: 1100px;
+    margin: 56px auto 32px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    color: #131313;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+  .step-text {
+    flex: 1;
+    max-width: 45%;
+  }
+  .step-text h2 {
+    font-weight: 800;
+    font-size: 1.27rem;
+    margin-bottom: 12px;
+    margin-top: 0;
+    color: #03452d;
+  }
+  .step-text p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.45;
+    max-width: 420px;
+  }
+  .step-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .step-image img {
+    max-width: 330px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.09);
+    object-fit: cover;
+    background: #f5f5f5;
+  }
+  
+  /* TEST Box */
+  .lizy-test-box {
+    background: #066b4e;
+    border-radius: 16px;
+    padding: 60px 30px;
+    max-width: 92vw;
+    width: 90vw;
+    min-width: 320px;
+    margin: 52px auto 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lizy-test-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .lizy-test-title {
+    color: #fff;
+    font-family: 'Fredoka One', 'Comic Sans MS', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2.15rem;
+    text-align: center;
+    margin-bottom: 38px;
+    text-shadow: 0 2px 2px #0002;
+    letter-spacing: 0.5px;
+    line-height: 1.18;
+  }
+  .lizy-test-btn {
+    background: #98bffa;
+    color: #fff;
+    font-family: 'Fredoka One', 'Comic Sans MS', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 26px;
+    padding: 16px 36px 13px 36px;
+    box-shadow: 0 4px 14px #4462ac24;
+    cursor: pointer;
+    text-align: center;
+    min-width: 220px;
+    transition: background 0.18s;
+  }
+  .lizy-test-btn:hover {
+    background: #7da0d8;
+  }
+  .lizy-test-btn-label {
+    display: block;
+    font-size: 1.01rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    letter-spacing: 0.1px;
+  }
+  .lizy-test-btn-number {
+    display: block;
+    font-size: 1.16rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 45vh;
+    padding: 60px 0 80px 0;
+    gap: 60px;
+  }
+  .faq-left {
+    min-width: 340px;
+    padding-top: 30px;
+  }
+  .faq-left h2 {
+    font-size: 2.02rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #153726;
+    letter-spacing: -1px;
+    margin: 0;
+  }
+  .faq-right {
+    width: 430px;
+    min-width: 320px;
+  }
+  .faq-item {
+    border-bottom: 1px solid #DFE5E3;
+    padding: 0;
+  }
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.09rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 22px 0 12px 0;
+    color: #153726;
+    transition: color 0.18s;
+  }
+  .faq-question:hover {
+    color: #295943;
+  }
+  .faq-toggle {
+    font-size: 22px;
+    font-weight: 400;
+    transition: color 0.2s;
+    min-width: 28px;
+    text-align: center;
+  }
+  .faq-answer {
+    font-size: 1rem;
+    line-height: 1.62;
+    color: #333;
+    padding: 0 0 18px 0;
+    display: none;
+    animation: fadeIn 0.3s;
+  }
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+  .faq-item.open .faq-toggle {
+    color: #153726;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .lizy-header { min-height: 0; }
+    .lizy-content { margin-top: 60px; }
+    .step-section {
+      gap: 38px;
+      padding: 0 7vw;
+    }
+    .step {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .step-text, .step-image {
+      max-width: 100%;
+    }
+    .step-image {
+      justify-content: flex-start;
+    }
+    .step-image img {
+      max-width: 98vw;
+    }
+    .faq-section {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+      padding: 38px 7vw 55px 7vw;
+    }
+    .faq-left {
+      min-width: 0;
+      padding-top: 0;
+    }
+    .faq-right {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    html { font-size: 15px; }
+    .lizy-test-box {
+      padding: 30px 5px;
+      min-width: 0;
+    }
+    .lizy-test-title {
+      font-size: 1.3rem;
+    }
+    .lizy-test-btn {
+      min-width: 140px;
+      padding: 11px 12px 8px 12px;
+      font-size: 1rem;
+    }
+    .faq-left h2 { font-size: 1.3rem; }
+  }
+  
+  /* Animation FAQ */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-7px);}
+    to { opacity: 1; transform: none;}
+  }
+  
