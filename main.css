@@ -1,0 +1,421 @@
+/* Optimisation des polices - Utilisation d'une seule famille avec différents poids */
+@font-face {
+  font-family: "Inter";
+  src: url(/font/Inter-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/font/Inter-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/font/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/font/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bowlby One";
+  src: url(/font/BowlbyOne-Regular.ttf) format("truetype");
+}
+
+/* Variables CSS pour les valeurs répétées */
+:root {
+  /* color  */
+  /* light purple */
+  --purple-light: #cdabfb;
+  --white: white;
+  --pink-text: #f9bcc3;
+  /* background */
+  --background-header: #0d324c;
+  --background-how: #92003f;
+
+  /* h1 font-size  */
+  --h1-font-size: 48px;
+  /* h2 font-size  */
+  --h2-font-size: 35px;
+  /* h3 font-size  */
+  --h3-font-size: 64px;
+
+  /* big text (btn) */
+  --font-size-big-p: 24px;
+  /* big text how it work */
+  --font-size-p: 21px;
+  /* normal p  */
+  --font-size-normal: 32px;
+  /* header space  */
+  --header-big-little: 64px;
+  --header-big-space: 96px;
+  /* margin-bottom */
+  --marging-bottom-h2: 90px;
+  /* space between section  */
+  --space-inter-section: 190px;
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --space-inter-section: 90px;
+  }
+}
+
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: var(--line-height-base);
+  background: var(--white);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: var(--font);
+}
+
+/* Styles de titres */
+h1,
+h2,
+h3 {
+  font-family: "Bowlby One", sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: var(--h1-font-size);
+  line-height: 49px;
+  margin-bottom: 64px;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+
+  line-height: 37px;
+  padding-bottom: var(--marging-bottom);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--spacing-xs);
+}
+/* Nav  */
+header {
+  background-color: #0d324c;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+header div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 80%;
+}
+.headerLogo img {
+  width: 125px;
+  height: auto;
+}
+/* end Nav  */
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.top-section {
+  background-color: #0d324c;
+  color: white;
+  padding: 50px 50px 50px 50px;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.top-section-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 2076px;
+}
+
+/* top-section items  */
+
+/* subtitle  */
+.top-section .top-section-container p {
+  font-size: var(--font-size-big-p);
+  margin-bottom: 96px;
+  /* max-width: 1220px; */
+  max-width: 720px;
+}
+
+/* texte in purple  */
+.top-section-purple {
+  color: var(--purple-light) !important;
+}
+.purple-rotate {
+  color: var(--purple-light) !important;
+  transform: rotate(-10deg);
+}
+.top-section-purple-buble {
+  background-color: var(--purple-light);
+  padding: 8px;
+  border-radius: 40px;
+  color: var(--background-header);
+  font-weight: 600;
+}
+.top-section-title {
+  position: relative;
+  max-width: 950px;
+}
+
+/* button  */
+.btnTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ef3741;
+  border-radius: 15px;
+  border: none;
+  color: white;
+
+  height: 81px;
+  width: 300px;
+  font-size: var(--font-size-normal);
+  font-weight: 600;
+}
+.btnTop-text {
+  font-size: 18px;
+  font-family: "Bowlby One", sans-serif;
+  font-weight: 400;
+}
+.btnTop-number {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Bowlby One", sans-serif;
+}
+/* charactere lizy (illustration) */
+.top-section-character-svg {
+  position: absolute;
+  transform: rotate(-10deg);
+  bottom: 120px;
+  right: 10px;
+  height: 55px;
+}
+/* end top-section items  */
+/* partner section  */
+.top-parntner-container {
+  display: flex;
+  max-width: 1070px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.partener-header {
+  font-size: 16px;
+}
+.top-partners {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #cdabfb;
+  height: 88px;
+  padding: 15px 0px;
+}
+.partners-svg {
+  display: flex;
+  align-items: center;
+}
+.partners-svg img {
+  margin: 0px 30px;
+  width: 110px;
+  height: auto;
+}
+/*end partner section  */
+
+/* Bloc section  */
+.middle-bloc-container {
+  margin-bottom: 90px;
+}
+.bloc {
+  display: flex;
+  max-width: 1070px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 90px;
+  gap: 58px;
+}
+.bloc .bloc-image {
+  width: 50%;
+}
+.bloc .bloc-image-border {
+  width: 50%;
+}
+.bloc .bloc-image-border img {
+  border-radius: 30px;
+  width: 100%;
+}
+.bloc .bloc-image img {
+  border-radius: 30px;
+  width: 100%;
+}
+.bloc .bloc-content {
+  width: 50%;
+}
+.bloc .bloc-content h2 {
+  text-align: left;
+  max-width: 413px;
+}
+.bloc .bloc-content p {
+  margin-top: 40px;
+  font-size: var(--font-size-p);
+  text-align: left;
+  max-width: 413px;
+}
+
+/* end  Bloc section  */
+
+/* Banner */
+.banner {
+  background-color: #0d324c;
+  max-width: 1070px;
+  width: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banner-text {
+  color: white;
+  padding: 50px 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.h2-banner {
+  margin-bottom: 40px;
+}
+.banner-text p {
+  color: white;
+  font-size: var(--font-size-p);
+  max-width: 610px;
+}
+.banner img {
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* end Banner  */
+
+/* Banner2 */
+.banner2 {
+  margin-top: 90px;
+  background-color: #92003f;
+  max-width: 1070px;
+  width: 100%;
+  border-radius: 30px;
+}
+.banner2-text {
+  color: #f9bcc3;
+  padding: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.h2-banner2 {
+  margin-bottom: 40px;
+  max-width: 598px;
+}
+
+/* end Banner2  */
+
+/* FAQ Section */
+.faq-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 45vh;
+  padding: 60px 0 80px 0;
+  gap: 60px;
+  max-width: 1070px;
+  width: 100%;
+}
+.faq-left {
+  min-width: 340px;
+  padding-top: 30px;
+}
+.faq-left h2 {
+  text-align: left;
+  /* font-size: 2.02rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #153726;
+  letter-spacing: -1px;
+  margin: 0; */
+}
+.faq-right {
+  width: 500px;
+
+  min-width: 320px;
+}
+.faq-item {
+  border-bottom: 1px solid #dfe5e3;
+  padding: 0;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.09rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 22px 0 12px 0;
+  color: #153726;
+  transition: color 0.18s;
+}
+.faq-question:hover {
+  color: #295943;
+}
+.faq-toggle {
+  font-size: 22px;
+  font-weight: 400;
+  transition: color 0.2s;
+  min-width: 28px;
+  text-align: center;
+}
+.faq-answer {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.62;
+  color: #333;
+  padding: 0 0 18px 0;
+  display: none;
+  animation: fadeIn 0.3s;
+}
+.faq-item.open .faq-answer {
+  display: block;
+}
+.faq-item.open .faq-toggle {
+  color: #153726;
+}
+/* end FAQ  */
