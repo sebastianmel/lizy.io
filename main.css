@@ -30,6 +30,21 @@
   font-family: "Bowlby One";
   src: url(font/BowlbyOne-Regular.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url(font/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(font/Montserrat-Bold.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(font/Montserrat-ExtraBold.ttf);
+  font-weight: 600;
+}
 
 /* Variables CSS pour les valeurs répétées */
 :root {
@@ -45,7 +60,7 @@
   /* h1 font-size  */
   --h1-font-size: 48px;
   /* h2 font-size  */
-  --h2-font-size: 35px;
+  --h2-font-size: 32px;
   /* h3 font-size  */
   --h3-font-size: 64px;
 
@@ -96,8 +111,8 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Bowlby One", sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 h1 {
   font-size: var(--h1-font-size);
@@ -205,13 +220,13 @@ main {
 }
 .btnTop-text {
   font-size: 18px;
-  font-family: "Bowlby One", sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 .btnTop-number {
   font-size: 24px;
-  font-weight: 400;
-  font-family: "Bowlby One", sans-serif;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 /* charactere lizy (illustration) */
 .top-section-character-svg {
@@ -232,12 +247,13 @@ main {
 }
 .partener-header {
   font-size: 16px;
+  color: #0d324c;
 }
 .top-partners {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #cdabfb;
+  background-color: #efefef;
   height: 88px;
   padding: 15px 0px;
 }
@@ -272,6 +288,7 @@ main {
 }
 .bloc .bloc-image-border img {
   border-radius: 30px;
+  border: 2px #0d324c solid;
   width: 100%;
 }
 .bloc .bloc-image img {
@@ -284,12 +301,14 @@ main {
 .bloc .bloc-content h2 {
   text-align: left;
   max-width: 413px;
+  color: #0d324c;
 }
 .bloc .bloc-content p {
   margin-top: 40px;
   font-size: var(--font-size-p);
   text-align: left;
   max-width: 413px;
+  color: #0d324c;
 }
 
 /* end  Bloc section  */
@@ -354,8 +373,8 @@ main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  min-height: 45vh;
-  padding: 60px 0 80px 0;
+  min-height: auto;
+  margin: 90px 0px;
   gap: 60px;
   max-width: 1070px;
   width: 100%;
@@ -419,3 +438,16 @@ main {
   color: #153726;
 }
 /* end FAQ  */
+/* footer  */
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #cdabfb;
+  width: 100%;
+}
+footer .footer-text {
+  padding: 15px 0px;
+  font-weight: 600;
+  font-size: 16px;
+}
+/* end footer  */
