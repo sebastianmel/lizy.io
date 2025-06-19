@@ -70,7 +70,8 @@
   /* big text (btn) */
   --font-size-big-p: 24px;
   /* big text how it work */
-  --font-size-p: 24px;
+  --font-size-p: 21px;
+  --line-height-p: 26px;
   /* normal p  */
   --font-size-normal: 32px;
   /* header space  */
@@ -96,6 +97,7 @@
     --space-inter-text: 25px;
     --font-size-p: 16px;
     --h2-font-size: 24px;
+    --line-height-p: 17px;
   }
 }
 
@@ -193,6 +195,7 @@ main {
 /* subtitle  */
 .top-section .top-section-container p {
   font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
   margin-bottom: var(--space-inter-text);
   /* max-width: 1220px; */
   max-width: 720px;
@@ -325,6 +328,7 @@ main {
 .bloc .bloc-content p {
   margin-top: var(--space-inter-text);
   font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
   text-align: left;
   max-width: 413px;
   color: #0d324c;
@@ -355,6 +359,7 @@ main {
 .banner-text p {
   color: #efefef;
   font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
   max-width: 610px;
 }
 .banner img {
