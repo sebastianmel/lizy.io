@@ -232,6 +232,7 @@ main {
   width: 300px;
   font-size: var(--font-size-normal);
   font-weight: 600;
+  align-items: center;
 }
 .btnTop-text {
   font-size: 18px;
@@ -565,6 +566,9 @@ footer .footer-text {
   }
 }
 @media screen and (max-width: 600px) {
+  header div {
+    justify-content: center;
+  }
   .top-section-character-svg {
     bottom: 104px;
   }
