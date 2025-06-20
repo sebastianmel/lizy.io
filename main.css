@@ -602,6 +602,9 @@ footer .footer-text {
   .h2-banner {
     margin: 20px 20px;
   }
+  .h2-banner2 {
+    max-width: 244px;
+  }
   .banner2 {
     width: 95%;
 
