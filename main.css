@@ -256,6 +256,31 @@ main {
   bottom: 120px;
   right: -5px;
   height: 55px;
+  /* for animation  */
+  opacity: 0;
+  transform: translateY(40px) rotate(-10deg);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+/*  visible */
+.top-section-character-svg.visible {
+  opacity: 1;
+  transform: translateY(0) rotate(-10deg);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animation levitation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 /* end top-section items  */
 /* partner section  */
@@ -496,6 +521,18 @@ footer .footer-text {
   max-width: 676px;
 }
 /* end footer  */
+/* animation  */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* media  */
 @media screen and (max-width: 1099px) {
   /* logo lizy  */

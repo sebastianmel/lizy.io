@@ -95,7 +95,7 @@
           </div>
           <div class="bloc-image">
             <!-- <img src="img/lizy-cest-quoi_desktop.webp" alt=""> -->
-            <picture>
+            <picture class="animate-on-scroll">
               <source
                 type="image/webp"
                 srcset="
@@ -136,7 +136,7 @@
           </div>
           <div class="bloc-image-border">
             <!-- <img src="img/lizy-mail_desktop.webp" alt=""> -->
-            <picture>
+            <picture class="animate-on-scroll">
               <source
                 type="image/webp"
                 srcset="
@@ -177,7 +177,7 @@
           </div>
           <div class="bloc-image">
             <!-- <img src="img/lizy-numero_desktop.webp" alt=""> -->
-            <picture>
+            <picture class="animate-on-scroll">
               <source
                 type="image/webp"
                 srcset="
@@ -352,6 +352,42 @@
         }
       });
     });
+    /* animation .bloc + image (all)*/
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    document
+      .querySelectorAll(".animate-on-scroll")
+      .forEach((el) => observer.observe(el));
+
+    /* animation character lizy */
+    const observerLizyCharacter = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observerLizyCharacter.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    const floatingImage = document.querySelector(".top-section-character-svg");
+    if (floatingImage) observerLizyCharacter.observe(floatingImage);
   </script>
 
   <script>
