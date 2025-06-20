@@ -20,19 +20,19 @@
     />
 
     <!-- favicon -->
-    <!-- <link
+    <link
       rel="icon"
       type="image/png"
-      href="img/favicon/favicon-96x96.png"
+      href="img/favicon/favicon-lizy-96x96.png"
       sizes="96x96"
-    /> -->
+    />
     <link rel="icon" type="image/svg+xml" href="img/favicon/favicon-lizy.svg" />
-    <!-- <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+    <link rel="shortcut icon" href="img/favicon/favicon-lizy.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/img/favicon/apple-touch-icon.png"
-    /> -->
+      href="img/favicon/apple-touch-icon.png"
+    />
     <link rel="manifest" href="/img/favicon/site.webmanifest" />
     <meta name="apple-mobile-web-app-title" content="Lizy" />
     <meta name="application-name" content="Lizy" />
@@ -270,7 +270,7 @@
           <div class="faq-item open">
             <div class="faq-question">
               <strong>Qui se cache derrière Lizy.ai</strong>
-              <span class="faq-toggle">−</span>
+              <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer">
               Lizy.ai est une solution française lancée par la société Ringover
@@ -281,7 +281,7 @@
           <div class="faq-item">
             <div class="faq-question">
               <strong>Est-ce que mes données sont protégées&nbsp;?</strong>
-              <span class="faq-toggle">+</span>
+              <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer" data-i18n="">
               Lizy.ai est en conformité avec la réglementation TGPD sur la
@@ -292,7 +292,7 @@
           <div class="faq-item">
             <div class="faq-question">
               <strong>Pourquoi c’est gratuit&nbsp;?</strong>
-              <span class="faq-toggle">+</span>
+              <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer">
               Lizy.ai fonctionne avec des algorithmes d’intelligence
@@ -325,13 +325,31 @@
   <script>
     // FAQ accordéon
     document.querySelectorAll(".faq-question").forEach((q) => {
-      q.addEventListener("click", function () {
-        const item = this.closest(".faq-item");
-        const open = item.classList.contains("open");
-        document
-          .querySelectorAll(".faq-item")
-          .forEach((i) => i.classList.remove("open"));
-        if (!open) item.classList.add("open");
+      const toggle = () => {
+        const item = q.closest(".faq-item");
+        const isOpen = item.classList.contains("open");
+
+        if (isOpen) return;
+
+        document.querySelectorAll(".faq-item").forEach((i) => {
+          i.classList.remove("open");
+          i.querySelector(".faq-question").setAttribute(
+            "aria-expanded",
+            "false"
+          );
+        });
+
+        item.classList.add("open");
+        q.setAttribute("aria-expanded", "true");
+      };
+
+      q.addEventListener("click", toggle);
+
+      q.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggle();
+        }
       });
     });
   </script>
