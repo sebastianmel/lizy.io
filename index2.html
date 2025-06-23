@@ -63,7 +63,7 @@
             Simple, gratuit, fonctionné avec votre numéro pro actuel. Activez
             Lizy quand vous voulez !
           </p>
-          <button class="btnTop">
+          <button class="btnTop" id="callButton">
             <span class="btnTop-text" data-i18n="btn-call">Appelez le</span>
             <span class="btnTop-number">01 84 80 18 18</span>
           </button>
@@ -249,7 +249,7 @@
             C’est gratuit.
           </h2>
 
-          <button class="btnTop" data-i18n="cta-free">
+          <button class="btnTop" id="callButton">
             <span class="btnTop-text" data-i18n="btn-call">Appelez le</span>
             <span class="btnTop-number">01 84 80 18 18</span>
           </button>
@@ -413,6 +413,12 @@
         observer.observe(el);
       });
     });
+    /* call function*/
+    document
+      .getElementById("callButton")
+      .addEventListener("click", function () {
+        window.location.href = "tel:0184801818";
+      });
   </script>
 
   <script>
