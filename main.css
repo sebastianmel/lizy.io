@@ -611,7 +611,7 @@ footer .footer-text {
     margin: var(--space-inter-section) 20px 0px 20px;
   }
   .banner2-text {
-    padding: 20px 0px;
+    padding: 30px 0px;
   }
   .faq-section {
     flex-direction: column;
@@ -638,6 +638,9 @@ footer .footer-text {
   }
   .bloc {
     flex-direction: column;
+  }
+  .banner2 {
+    width: 90%;
   }
   .top-section .top-section-container p {
     text-align: left;
