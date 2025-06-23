@@ -350,7 +350,7 @@
         }
       });
     });
-    // /* animation .bloc + image (all)*/
+    /* animation .bloc + image (all)*/
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -369,7 +369,7 @@
       .querySelectorAll(".animate-on-scroll")
       .forEach((el) => observer.observe(el));
 
-    // /* animation character lizy */
+    /* animation character lizy */
     const observerLizyCharacter = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -386,6 +386,33 @@
 
     const floatingImage = document.querySelector(".top-section-character-svg");
     if (floatingImage) observerLizyCharacter.observe(floatingImage);
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in-bottom");
+              observer.unobserve(
+                entry.target
+              ); /* pour que ça se joue une seule fois*/
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      const targets = document.querySelectorAll(
+        ".top-partner-container, .bloc, .banner-text, .banner2-text, .faq-section"
+      );
+
+      targets.forEach((el) => {
+        el.classList.add("observed-element"); /* Initial opacity 0*/
+        observer.observe(el);
+      });
+    });
   </script>
 
   <script>
