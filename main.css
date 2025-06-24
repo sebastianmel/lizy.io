@@ -58,8 +58,10 @@
   --background-how: #92003f;
 
   /* h1 font-size  */
-  --h1-font-size: 48px;
-  --h1-line-height: 49px;
+  /* --h1-font-size: 48px; */
+  --h1-font-size: 84px;
+  --h1-line-height: 88px;
+  /* --h1-line-height: 49px; */
   --h1-margin-bottom: 64px;
   /* h2 font-size  */
   --h2-font-size: 32px;
@@ -215,6 +217,8 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 100vh;
+  align-items: center;
 }
 .top-section-container {
   display: flex;
@@ -257,8 +261,8 @@ main {
 }
 .top-section-title {
   position: relative;
-  /* max-width: 950px; */
-  max-width: 798px;
+  /* max-width: 798px; */
+  max-width: 1300px;
   color: #efefef;
 }
 
@@ -292,18 +296,14 @@ main {
 .top-section-character-svg {
   position: absolute;
   transform: rotate(-10deg);
-  bottom: 120px;
+  bottom: 162px;
   right: -5px;
   height: 55px;
   /* for animation  */
-  opacity: 0;
+  /* opacity: 0; */
   transform: translateY(40px) rotate(-10deg);
   transition: opacity 0.8s ease, transform 0.8s ease;
   will-change: opacity, transform;
-}
-
-/*  visible */
-.top-section-character-svg.visible {
   opacity: 1;
   transform: translateY(0) rotate(-10deg);
   animation: float 3s ease-in-out infinite;
@@ -473,6 +473,7 @@ main {
 }
 .faq-left h2 {
   text-align: left;
+  color: #0d324c;
   /* font-size: 2.02rem;
   font-weight: 700;
   line-height: 1.25;
@@ -497,7 +498,7 @@ main {
   font-weight: 600;
   cursor: pointer;
   padding: 22px 0 12px 0;
-  color: #153726;
+  color: #0d324c;
   transition: color 0.18s;
   text-align: left;
 }
@@ -528,7 +529,7 @@ main {
   padding: 12px 0 18px 0;
 }
 .faq-item.open .faq-toggle {
-  color: #153726;
+  color: #0d324c;
 }
 .faq-toggle::before {
   content: "+";
@@ -674,7 +675,6 @@ footer .footer-text {
   }
   .top-section-character-svg {
     bottom: 124px;
-    display: none;
   }
   .bloc {
     flex-direction: column;

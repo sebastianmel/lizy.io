@@ -60,8 +60,8 @@
             />
           </h1>
           <p class="top-subtitle-p" data-i18n="top-subtitle-p">
-            Simple, gratuit, fonctionné avec votre numéro pro actuel. Activez
-            Lizy quand vous voulez !
+            Ne ratez plus aucun appel client. Lizy répond à votre place, échange
+            avec vos clients, qualifie les appels et vous envoie un résumé.
           </p>
           <button class="btnTop" id="callButton">
             <span class="btnTop-text" data-i18n="btn-call">Appelez le</span>
@@ -84,11 +84,13 @@
       <section class="middle-bloc-container">
         <div class="bloc">
           <div class="bloc-content">
-            <h2 data-i18n="bloc1-title">C’est quoi Lisy ?</h2>
+            <h2 data-i18n="bloc1-title">
+              Finis les répondeurs ennuyeux qui refroidissent vos appelants
+            </h2>
             <p data-i18n="bloc1-p">
-              Lizy est un agent AI, solution 100% française, qui répond à la
-              place de votre répondeur. Dès que vous ne répondez pas, c’est Lizy
-              qui prend l’appel.
+              Lizy accueille vos clients de manière professionnelle, leur posent
+              quelques questions pertinentes et les informe qu’ils seront
+              rappelés dans les plus brefs délais.
             </p>
           </div>
           <div class="bloc-image">
@@ -96,39 +98,40 @@
               <source
                 type="image/webp"
                 srcset="
-                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_desktop.webp
+                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_desktop2.webp
                 "
                 media="(min-width: 420px)"
               />
               <source
                 type="image/webp"
                 srcset="
-                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_mobile.webp
+                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_mobile2.webp
                 "
                 media="(max-width: 420px)"
               />
               <img
                 srcset="
-                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_desktop.png    1520w,
-                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_mobile.png.png  480w
+                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_desktop2.png    1520w,
+                  https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_mobile2.png.png  480w
                 "
-                src="https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_desktop.png.png"
+                src="https://webcdn.quicktalk.com/images/lizy/fr/lizy-cest-quoi_desktop2.png.png"
                 alt=""
                 width="300"
                 height="auto"
               />
             </picture>
+            <div class=""></div>
           </div>
         </div>
         <div class="bloc">
           <div class="bloc-content">
             <h2 data-i18n="bloc2-title">
-              Lizy vous envoi un mail et le détail de l’appel
+              Recevez immédiatement le résumé de l’appel
             </h2>
             <p data-i18n="bloc2-p">
-              Vous recevez un résumé de chaque conversation avec toutes les
-              informations pour rappeler vos clients. Vous pouvez également les
-              ré-écouter ou lire la transcription.
+              Vous recevez un résumé de chaque appel avec toutes les
+              informations pour rappeler vos clients avec tout le contexte. Vous
+              pouvez aussi lire la transcription complète de l’appel.
             </p>
           </div>
           <div class="bloc-image-border">
@@ -163,12 +166,12 @@
         <div class="bloc">
           <div class="bloc-content">
             <h2 data-i18n="bloc3-title">
-              Utilisez Lizy quand vous voulez avec votre numéro habituel
+              Utilisez Lizy avec votre numéro habituel, c’est tellement simple !
             </h2>
             <p data-i18n="bloc3-p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              tempor nulla ac vehicula laoreet. Quisque hendrerit blandit
-              dapibus.
+              Pas besoin de changer d’opérateur ou de numéro. Vous pouvez
+              activez ou désactiver Lizy à tout moment, gratuitement et sans
+              limite d’utilisation.
             </p>
           </div>
           <div class="bloc-image">
@@ -368,24 +371,6 @@
     document
       .querySelectorAll(".animate-on-scroll")
       .forEach((el) => observer.observe(el));
-
-    /* animation character lizy */
-    const observerLizyCharacter = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observerLizyCharacter.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.3,
-      }
-    );
-
-    const floatingImage = document.querySelector(".top-section-character-svg");
-    if (floatingImage) observerLizyCharacter.observe(floatingImage);
 
     document.addEventListener("DOMContentLoaded", function () {
       const observer = new IntersectionObserver(
