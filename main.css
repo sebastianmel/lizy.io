@@ -59,8 +59,8 @@
 
   /* h1 font-size  */
   /* --h1-font-size: 48px; */
-  --h1-font-size: 66px;
-  --h1-line-height: 68px;
+  --h1-font-size: 84px;
+  --h1-line-height: 88px;
   /* --h1-line-height: 49px; */
   --h1-margin-bottom: 64px;
   /* h2 font-size  */
@@ -368,6 +368,7 @@ main {
 }
 .bloc .bloc-image {
   width: 50%;
+  position: relative;
 }
 .bloc .bloc-image-border {
   width: 50%;
@@ -398,6 +399,39 @@ main {
   color: #0d324c;
 }
 
+.bloc .bloc-image .buble-container picture {
+  display: flex;
+  width: 100%;
+  text-align: left;
+}
+.bloc .bloc-image .buble-container picture img {
+  position: absolute;
+  width: 80%;
+}
+.bloc .bloc-image .buble-container picture .buble1 {
+  top: 30px;
+}
+.bloc .bloc-image .buble-container picture .buble2 {
+  top: 146px;
+}
+.bloc .bloc-image .buble-container picture .buble3 {
+  top: 265px;
+}
+
+.buble1,
+.buble2,
+.buble3 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.buble1.visible,
+.buble2.visible,
+.buble3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* end  Bloc section  */
 
 /* Banner */
@@ -630,6 +664,15 @@ footer .footer-text {
     flex-direction: column-reverse;
     align-items: center;
   }
+  .bloc .bloc-image .buble-container picture .buble1 {
+    top: 4%;
+  }
+  .bloc .bloc-image .buble-container picture .buble2 {
+    top: 35%;
+  }
+  .bloc .bloc-image .buble-container picture .buble3 {
+    top: 67%;
+  }
   /* first banner bottom  */
   .banner {
     width: auto;
@@ -678,6 +721,9 @@ footer .footer-text {
   }
   .bloc {
     flex-direction: column;
+  }
+  .bloc .bloc-image .buble-container picture {
+    justify-content: center;
   }
   .banner2 {
     width: 90%;
