@@ -51,6 +51,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: "LilitaOne";
+  src: url(font/LilitaOne-Regular.ttf);
+  font-weight: 600;
+}
+
 /* Variables CSS pour les valeurs répétées */
 :root {
   /* color  */
@@ -157,7 +163,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "GasoekOne", sans-serif;
+  font-family: "LilitaOne", sans-serif;
   font-weight: 600;
 }
 h1 {
@@ -248,7 +254,6 @@ main {
   /* max-width: 1220px; */
   max-width: 720px;
 }
-
 /* texte in purple  */
 .top-section-purple {
   color: var(--purple-light) !important;
@@ -267,7 +272,8 @@ main {
 .top-section-title {
   position: relative;
   /* max-width: 798px; */
-  max-width: 1300px;
+  /* max-width: 1300px; */
+  max-width: 900px;
   color: #efefef;
 }
 
@@ -619,6 +625,11 @@ footer .footer-text {
   transform: translateY(0);
 }
 /* media  */
+@media screen and (min-width: 2000px) {
+  .top-section {
+    height: 50vh;
+  }
+}
 @media screen and (max-width: 1099px) {
   /* logo lizy  */
   .top-section-character-svg {
@@ -738,13 +749,16 @@ footer .footer-text {
   }
   .bloc .bloc-image .buble-container picture .buble1 {
     left: 30px;
+    top: 10%;
   }
   .bloc .bloc-image .buble-container picture .buble2 {
     left: initial;
     right: 30px;
+    top: 39%;
   }
   .bloc .bloc-image .buble-container picture .buble3 {
     left: 30px;
+    bottom: 10%;
   }
   .banner2 {
     width: 90%;
