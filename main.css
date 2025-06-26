@@ -45,7 +45,11 @@
   src: url(font/Montserrat-ExtraBold.ttf);
   font-weight: 600;
 }
-
+@font-face {
+  font-family: "GasoekOne";
+  src: url(font/GasoekOne-Regular.ttf);
+  font-weight: 600;
+}
 /* Variables CSS pour les valeurs répétées */
 :root {
   /* color  */
@@ -59,8 +63,8 @@
 
   /* h1 font-size  */
   /* --h1-font-size: 48px; */
-  --h1-font-size: 84px;
-  --h1-line-height: 88px;
+  --h1-font-size: 66px;
+  --h1-line-height: 68px;
   /* --h1-line-height: 49px; */
   --h1-margin-bottom: 64px;
   /* h2 font-size  */
@@ -152,7 +156,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "GasoekOne", sans-serif;
   font-weight: 600;
 }
 h1 {
@@ -406,7 +410,7 @@ main {
 }
 .bloc .bloc-image .buble-container picture img {
   position: absolute;
-  width: 80%;
+  width: 66%;
 }
 .bloc .bloc-image .buble-container picture .buble1 {
   top: 30px;
@@ -493,20 +497,21 @@ main {
 /* FAQ Section */
 .faq-section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   min-height: auto;
   margin: var(--space-inter-section) 0px;
   gap: 60px;
   max-width: 1070px;
   width: 100%;
+  flex-direction: column;
 }
 .faq-left {
   min-width: 340px;
   padding-top: 30px;
 }
 .faq-left h2 {
-  text-align: left;
+  text-align: center;
   color: #0d324c;
   /* font-size: 2.02rem;
   font-weight: 700;
@@ -516,9 +521,10 @@ main {
   margin: 0; */
 }
 .faq-right {
-  width: 500px;
+  /* width: 500px;
 
-  min-width: 320px;
+  min-width: 320px; */
+  width: 100%;
 }
 .faq-item {
   border-bottom: 1px solid #dfe5e3;
@@ -744,6 +750,9 @@ footer .footer-text {
     line-height: 34px;
   }
   .top-section .top-section-container p {
+    text-align: left;
+  }
+  .faq-left h2 {
     text-align: left;
   }
   .footer-legal-mention p {
