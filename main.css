@@ -56,7 +56,11 @@
   src: url(font/LilitaOne-Regular.ttf);
   font-weight: 600;
 }
-
+@font-face {
+  font-family: "Barlow-Black";
+  src: url(font/Barlow-Black.ttf);
+  font-weight: 600;
+}
 /* Variables CSS pour les valeurs répétées */
 :root {
   /* color  */
@@ -164,7 +168,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "LilitaOne", sans-serif;
+  font-family: "Barlow-Black", sans-serif;
   font-weight: 600;
 }
 h1 {
