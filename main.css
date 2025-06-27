@@ -84,7 +84,8 @@
   --font-size-big-p: 24px;
   /* big text how it work */
   --font-size-p: 21px;
-  --line-height-p: 26px;
+  /* --line-height-p: 26px; */
+  --line-height-p: initial;
   /* normal p  */
   --font-size-normal: 32px;
   /* header space  */
