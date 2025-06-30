@@ -89,7 +89,8 @@
   /* big text how it work */
   --font-size-p: 21px;
   /* --line-height-p: 26px; */
-  --line-height-p: 28px;
+  /*  --line-height-p: 29px;*/
+  --line-height-p: initial;
   /* normal p  */
   --font-size-normal: 32px;
   /* header space  */
