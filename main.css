@@ -561,7 +561,7 @@ main {
   max-width: 748px;
 }
 .faq-item {
-  border-bottom: 1px solid #dfe5e3;
+  /* border-bottom: 1px solid #dfe5e3; */
   padding: 0;
 }
 .faq-question {
