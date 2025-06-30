@@ -391,7 +391,7 @@ main {
 }
 .bloc .bloc-image-border img {
   border-radius: 30px;
-  border: 2px #0d324c solid;
+  /* border: 2px #0d324c solid; */
   width: 100%;
 }
 .bloc .bloc-image img {
