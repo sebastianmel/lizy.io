@@ -527,11 +527,17 @@ main {
   align-items: center;
   justify-content: space-between;
   min-height: auto;
-  margin: var(--space-inter-section) 0px;
+  /* margin: var(--space-inter-section) 0px; */
   gap: 60px;
   max-width: 1070px;
   width: 100%;
   flex-direction: column;
+
+  background: #cdabfb;
+  padding: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -41px;
 }
 .faq-left {
   min-width: 340px;
@@ -552,6 +558,7 @@ main {
 
   min-width: 320px; */
   width: 100%;
+  max-width: 748px;
 }
 .faq-item {
   border-bottom: 1px solid #dfe5e3;
@@ -738,7 +745,7 @@ footer .footer-text {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
-    padding: 0px 20px;
+    /* padding: 0px 20px; */
   }
   .faq-right {
     width: 100%;
