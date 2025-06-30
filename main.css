@@ -298,6 +298,10 @@ main {
   font-size: var(--font-size-normal);
   font-weight: 600;
   align-items: center;
+  cursor: pointer;
+}
+.btnTop:hover {
+  opacity: 80%;
 }
 .btnTop-text {
   font-size: 16px;
