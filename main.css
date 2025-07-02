@@ -105,6 +105,7 @@
 
   /* big text (btn) */
   --font-size-big-p: 24px;
+  --line-height-big-p: 25px;
   /* big text how it work */
   --font-size-p: 21px;
   /* --line-height-p: 26px; */
@@ -130,11 +131,15 @@
     --h1-font-size: 40px;
     --h1-line-height: 41px;
     --h1-margin-bottom: 30px;
+    --h2-banner-font-size: 34px !important;
+    --h2-banner-line-height: 36px !important;
     --h2-line-height: 25px;
     --space-inter-text: 25px;
     --font-size-p: 16px;
     --h2-font-size: 24px;
     --line-height-p: 22px;
+    --font-size-big-p: 18px;
+    --line-height-big-p: 20px;
   }
 }
 
@@ -580,6 +585,7 @@ main {
 .question {
   color: #7e26f6;
   font-size: var(--font-size-big-p);
+  line-height: var(--line-height-big-p);
 }
 .faq-section {
   display: flex;
@@ -631,6 +637,11 @@ main {
   padding: 30px;
 
   margin-bottom: 10px;
+  cursor: pointer;
+}
+.faq-item:hover {
+  /* background: #dcd1ec; */
+  background: #dcbdff;
 }
 .faq-question {
   display: flex;
