@@ -43,7 +43,7 @@
   <body>
     <header>
       <div class="headerLogo">
-        <img src="img/logos/lizy_logo.svg" alt="" />
+        <img src="img/logos/logo-lizy.svg" alt="" />
       </div>
     </header>
     <main>
@@ -337,9 +337,15 @@
           />
         </picture>
       </section>
+      <!-- banner2  -->
       <section class="banner2">
+        <!-- etoiles -->
+        <img class="banner2-starts1" src="img/logos/etoiles.svg" alt="" />
+        <img class="banner2-starts2" src="img/logos/etoiles.svg" alt="" />
+        <img class="banner2-starts3" src="img/logos/etoiles.svg" alt="" />
+        <!-- end etoiles  -->
         <div class="banner2-text">
-          <h2 class="h2-banner2" data-i18n="">
+          <h2 class="h2-banner2" data-i18n="banner2-title">
             Testez Lizy en un coup de fil. C’est sans engagement<br />
             C’est gratuit.
           </h2>
@@ -350,6 +356,21 @@
             >
             <span class="btnTop-number">01 84 80 18 18</span>
           </button>
+        </div>
+
+        <div class="number-list">
+          <div class="number-item">
+            <span class="item-circle">1</span>
+            <p>loreremajfldhfkhskjfdghksgfdg</p>
+          </div>
+          <div class="number-item">
+            <span class="item-circle">2</span>
+            <p>loreremajfldhfkhskjfdghksgfdg</p>
+          </div>
+          <div class="number-item">
+            <span class="item-circle">3</span>
+            <p>loreremajfldhfkhskjfdghksgfdg</p>
+          </div>
         </div>
       </section>
       <div class="faq-section">
@@ -362,7 +383,9 @@
         <div class="faq-right">
           <div class="faq-item open">
             <div class="faq-question">
-              <strong data-i18n="faq1">Qui se cache derrière Lizy.ai</strong>
+              <strong data-i18n="faq1" class="question"
+                >Qui se cache derrière Lizy.ai</strong
+              >
               <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer" data-i18n="answer1">
@@ -374,7 +397,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <strong data-i18n="faq2"
+              <strong data-i18n="faq2" class="question"
                 >Est-ce que mes données sont protégées&nbsp;?</strong
               >
               <span class="faq-toggle"></span>
@@ -388,7 +411,9 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <strong data-i18n="faq3">Est-ce vraiment gratuit&nbsp;?</strong>
+              <strong data-i18n="faq3" class="question"
+                >Est-ce vraiment gratuit&nbsp;?</strong
+              >
               <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer" data-i18n="answer3">
@@ -400,7 +425,9 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <strong data-i18n="faq4">Comment tester Lizy&nbsp;?</strong>
+              <strong data-i18n="faq4" class="question"
+                >Comment tester Lizy&nbsp;?</strong
+              >
               <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer" data-i18n="answer4">
@@ -412,7 +439,9 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <strong data-i18n="faq5">Comment activer Lizy&nbsp;?</strong>
+              <strong data-i18n="faq5" class="question"
+                >Comment activer Lizy&nbsp;?</strong
+              >
               <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer" data-i18n="answer5">
@@ -426,7 +455,9 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <strong data-i18n="faq6">Comment désactiver Lizy&nbsp;?</strong>
+              <strong data-i18n="faq6" class="question"
+                >Comment désactiver Lizy&nbsp;?</strong
+              >
               <span class="faq-toggle"></span>
             </div>
             <div class="faq-answer" data-i18n="answer6">
@@ -437,7 +468,7 @@
           </div>
           <div class="faq-item">
             <div class="faq-question">
-              <strong data-i18n="faq7"
+              <strong data-i18n="faq7" class="question"
                 >Comment Lizy remplace-t-elle mon répondeur&nbsp;?</strong
               >
               <span class="faq-toggle"></span>
@@ -451,7 +482,7 @@
 
           <div class="faq-item">
             <div class="faq-question">
-              <strong data-i18n="faq9"
+              <strong data-i18n="faq9" class="question"
                 >Puis-je utiliser Lizy avec mon numéro actuel&nbsp;?</strong
               >
               <span class="faq-toggle"></span>
@@ -489,18 +520,13 @@
         const item = q.closest(".faq-item");
         const isOpen = item.classList.contains("open");
 
-        if (isOpen) return;
-
-        document.querySelectorAll(".faq-item").forEach((i) => {
-          i.classList.remove("open");
-          i.querySelector(".faq-question").setAttribute(
-            "aria-expanded",
-            "false"
-          );
-        });
-
-        item.classList.add("open");
-        q.setAttribute("aria-expanded", "true");
+        if (isOpen) {
+          item.classList.remove("open");
+          q.setAttribute("aria-expanded", "false");
+        } else {
+          item.classList.add("open");
+          q.setAttribute("aria-expanded", "true");
+        }
       };
 
       q.addEventListener("click", toggle);
@@ -557,12 +583,6 @@
         observer.observe(el);
       });
     });
-    /* call function*/
-    document
-      .getElementById("callButton")
-      .addEventListener("click", function () {
-        window.location.href = "tel:0184801818";
-      });
 
     /* Observer pour déclencher l'apparition des bulles avec délai*/
     const bubleObserver = new IntersectionObserver(
@@ -592,6 +612,19 @@
     if (bubleContainer) {
       bubleObserver.observe(bubleContainer);
     }
+
+    /* call function*/
+    document
+      .getElementById("callButton")
+      .addEventListener("click", function () {
+        window.location.href = "tel:0184801818";
+      });
+    /*register*/
+    document
+      .getElementById("formButton")
+      .addEventListener("click", function () {
+        window.location.href = "/register";
+      });
   </script>
 
   <script>
