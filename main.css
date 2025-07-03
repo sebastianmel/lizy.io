@@ -56,6 +56,12 @@
   src: url(font/LilitaOne-Regular.ttf);
   font-weight: 600;
 }
+
+@font-face {
+  font-family: "Barlow-Black";
+  src: url(font/Barlow-SemiBold.ttf);
+  font-weight: 500;
+}
 @font-face {
   font-family: "Barlow-Black";
   src: url(font/Barlow-Black.ttf);
