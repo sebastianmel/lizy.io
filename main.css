@@ -419,7 +419,7 @@ main {
 
 /* Bloc section  */
 .middle-bloc-container {
-  margin-bottom: 90px;
+  margin-bottom: var(--space-inter-section);
 }
 .bloc {
   display: flex;
