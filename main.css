@@ -1106,6 +1106,10 @@ footer .footer-text {
   }
 }
 @media screen and (max-width: 600px) {
+  .top-section {
+    height: auto;
+    padding: 50px 20px 0px 20px;
+  }
   * .top-section-title {
     text-align: left;
   }
@@ -1115,11 +1119,14 @@ footer .footer-text {
   header div {
     justify-content: center;
   }
+  .top-section-character-svg {
+    bottom: 117px;
+  }
+  .partener-header {
+    margin-bottom: 10px;
+  }
   .partners-svg {
     margin-left: initial;
-  }
-  .top-section-character-svg {
-    bottom: 124px;
   }
   .bloc {
     flex-direction: column;
