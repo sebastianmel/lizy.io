@@ -61,6 +61,17 @@
   src: url(font/Barlow-Black.ttf);
   font-weight: 600;
 }
+@font-face {
+  font-family: "Barlow-Black";
+  src: url(font/Barlow-Blod.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Barlow-Black";
+  src: url(font/Barlow-ExtraBold.ttf);
+  font-weight: 800;
+}
+
 /* Variables CSS pour les valeurs répétées */
 :root {
   /* color  */
@@ -474,6 +485,7 @@ main {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  border-radius: 1px !important;
 }
 
 .buble1.visible,
@@ -531,23 +543,23 @@ main {
   max-width: 1070px;
   padding: 50px 0px;
 }
-.banner2-starts1,
-.banner2-starts2,
-.banner2-starts3 {
+.banner2-stars1,
+.banner2-stars2,
+.banner2-stars3 {
   position: absolute;
-  width: 142px;
-  height: 142px;
+  width: 122px;
+  height: 122px;
 }
-.banner2-starts1 {
+.banner2-stars1 {
   top: 350px;
   right: 35%;
 }
-.banner2-starts2 {
+.banner2-stars2 {
   top: 250px;
   left: 25%;
 }
-.banner2-starts3 {
-}
+/* .banner2-stars3 {
+} */
 
 .banner2-text {
   color: #f9bcc3;
@@ -596,7 +608,7 @@ main {
 /* FAQ Section */
 .question {
   font-family: "Barlow-Black", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   color: #7e26f6;
   font-size: var(--font-size-big-p);
   line-height: var(--line-height-big-p);
@@ -1093,6 +1105,9 @@ footer .footer-text {
   header div {
     justify-content: center;
   }
+  .partners-svg {
+    margin-left: initial;
+  }
   .top-section-character-svg {
     bottom: 124px;
   }
@@ -1123,6 +1138,25 @@ footer .footer-text {
     margin: 20px 20px 40px 0px;
     text-align: left !important;
   }
+  .banner2-stars1,
+  .banner2-stars2,
+  .banner2-stars3 {
+    position: absolute;
+    width: 102px;
+    height: 102px;
+  }
+  .banner2-stars1 {
+    top: 416px;
+    right: 62%;
+  }
+  .banner2-stars3 {
+    top: 115px;
+    right: 14%;
+  }
+
+  .banner2-stars2 {
+    display: none;
+  }
   .banner-text {
     margin-bottom: var(--space-inter-text);
   }
@@ -1138,9 +1172,9 @@ footer .footer-text {
   .banner2-text {
     padding: 20px 0px;
   }
-  .faq-section {
+  /* .faq-section {
     padding: 40px;
-  }
+  } */
   .top-section .top-section-container p {
     text-align: left;
   }
