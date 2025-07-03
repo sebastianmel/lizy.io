@@ -69,20 +69,8 @@
   --purple-dark: #7e26f6;
   --white: white;
   --pink-text: #f9bcc3;
+  --font-color: #0d324c;
 
-  --font: #394759;
-  --font-light: #567191;
-  --font-verylight: #8193a8;
-  --font-secondary: #b6b6db;
-  --border: #dfe5f3;
-  --border_light: #f0f3fa;
-  --bg_light: #f9fbff;
-  --green: #27c9d6;
-  --green-light: #eefbfc;
-  --blue: #1a1b8f;
-  --blue_light: #f5f8ff;
-  --grey_light: #e8e8f4;
-  --purple: #2b1a8f;
   /* background */
   --background-header: #0d324c;
   --background-how: #92003f;
@@ -92,7 +80,7 @@
   --h1-font-size: 66px;
   --h1-line-height: 68px;
   /* --h1-line-height: 49px; */
-  --h1-margin-bottom: 64px;
+  --h1-margin-bottom: 40px;
   /* h2 font-size  */
   --h2-font-size: 37px;
   --h2-line-height: 38px;
@@ -218,7 +206,7 @@ h3 {
 }
 /* Nav  */
 header {
-  background-color: #0d324c;
+  background-color: var(--font-color);
   padding: 20px 0px;
   display: flex;
   justify-content: center;
@@ -227,10 +215,13 @@ header div {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  max-width: 80%;
+  max-width: 1070px;
+}
+.headerLogo {
+  width: 100%;
 }
 .headerLogo img {
-  width: 75px;
+  width: 90px;
   height: auto;
 }
 /* end Nav  */
@@ -251,14 +242,15 @@ main {
   }
 }
 .top-section {
-  background-color: #0d324c;
+  background-color: var(--font-color);
   color: #efefef;
   padding: 50px 50px 0px 50px;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 99vh;
   align-items: center;
 }
 .top-section-container {
@@ -272,6 +264,7 @@ main {
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   transition: all 0.5s ease;
+  margin-bottom: var(--h1-margin-bottom);
 }
 
 /* top-section items  */
@@ -280,7 +273,7 @@ main {
 .top-section .top-section-container p {
   font-size: var(--font-size-p);
   line-height: var(--line-height-p);
-  margin-bottom: var(--space-inter-text);
+  margin-bottom: var(--h1-margin-bottom);
   /* max-width: 1220px; */
   max-width: 720px;
 }
@@ -335,13 +328,14 @@ main {
 
 .btnTop-text {
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Barlow-Black", sans-serif;
   font-weight: 600;
+  margin-bottom: 5px;
 }
 .btnTop-number {
   font-size: 24px;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
 }
 /* charactere lizy (illustration) */
 .top-section-character-svg {
@@ -389,16 +383,17 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #0d324c;
+  background-color: var(--font-color);
   height: 88px;
   padding: 15px 0px;
 }
 .partners-svg {
+  margin-left: 30px;
   display: flex;
   align-items: center;
 }
 .partners-svg img {
-  margin: 0px 30px;
+  margin: 0px 10px;
   width: 110px;
   height: auto;
 }
@@ -439,7 +434,7 @@ main {
 .bloc .bloc-content h2 {
   text-align: left;
   max-width: 413px;
-  color: #0d324c;
+  color: var(--font-color);
 }
 .bloc .bloc-content p {
   margin-top: var(--space-inter-text);
@@ -447,7 +442,7 @@ main {
   line-height: var(--line-height-p);
   text-align: left;
   max-width: 413px;
-  color: #0d324c;
+  color: var(--font-color);
 }
 
 .bloc .bloc-image .buble-container picture {
@@ -491,7 +486,7 @@ main {
 
 /* Banner */
 .banner {
-  background-color: #0d324c;
+  background-color: var(--font-color);
   max-width: 1070px;
   width: 100%;
   border-radius: 30px;
@@ -534,7 +529,7 @@ main {
   flex-direction: column;
   align-items: center;
   max-width: 1070px;
-  padding: 100px 0px;
+  padding: 50px 0px;
 }
 .banner2-starts1,
 .banner2-starts2,
@@ -556,7 +551,7 @@ main {
 
 .banner2-text {
   color: #f9bcc3;
-  padding: 80px 0px;
+  margin-bottom: var(--space-inter-text);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -566,13 +561,14 @@ main {
   line-height: var(--h2-banner-line-height);
   margin-bottom: 40px;
   max-width: 924px;
-  text-align: left;
+  text-align: center;
 }
 .number-list {
   display: flex;
   justify-content: space-between;
   max-width: 700px;
   width: 100%;
+  z-index: 0;
 }
 .number-item {
   /* background: #cdabfb; */
@@ -587,8 +583,10 @@ main {
   color: #cdabfb;
   font-weight: 800;
   margin-right: 15px;
+  font-family: "Barlow-Black", sans-serif;
 }
 .number-item p {
+  font-family: "Inter", sans-serif;
   font-size: 32px;
   color: white;
   font-weight: 600;
@@ -597,6 +595,8 @@ main {
 
 /* FAQ Section */
 .question {
+  font-family: "Barlow-Black", sans-serif;
+  font-weight: 600;
   color: #7e26f6;
   font-size: var(--font-size-big-p);
   line-height: var(--line-height-big-p);
@@ -627,7 +627,7 @@ main {
   color: #7e26f6;
   font-size: var(--h2-banner-font-size);
   line-height: var(--h2-banner-line-height);
-  /* color: #0d324c; */
+  /* color: var(--font-color); */
   /* font-size: 2.02rem;
   font-weight: 700;
   line-height: 1.25;
@@ -655,7 +655,7 @@ main {
 }
 .faq-item:hover {
   /* background: #dcd1ec; */
-  background: #dcbdff;
+  background: #f3e8ff;
 }
 .faq-question {
   display: flex;
@@ -665,7 +665,7 @@ main {
   font-weight: 600;
   cursor: pointer;
   /* padding: 22px 0 12px 0; */
-  color: #0d324c;
+  color: var(--font-color);
   transition: color 0.18s;
   text-align: left;
   height: 40px;
@@ -682,7 +682,7 @@ main {
   text-align: left;
   font-size: var(--font-size-p);
   /* line-height: 1.62; */
-  color: #333;
+  color: var(--font-color);
   padding: 0 0 18px 0;
   display: none;
   animation: fadeIn 0.3s;
@@ -697,7 +697,7 @@ main {
   padding: 12px 0px 0px 0px;
 }
 .faq-item.open .faq-toggle {
-  color: #0d324c;
+  color: var(--font-color);
 }
 .faq-toggle::before {
   content: "+";
@@ -711,7 +711,7 @@ footer {
   display: flex;
   justify-content: center;
   /* background-color: #cdabfb; */
-  background-color: #0d324c;
+  background-color: var(--font-color);
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -942,7 +942,7 @@ footer .footer-text {
   margin-top: 8px;
 }
 .blue_section_register {
-  background-color: #0d324c;
+  background-color: var(--font-color);
 }
 .blue_section_register #menu {
   padding-top: var(--space-inter-text);
@@ -965,7 +965,8 @@ footer .footer-text {
 /* media  */
 @media screen and (min-width: 2000px) {
   .top-section {
-    height: 40vh;
+    /* height: 40vh; */
+    height: auto;
   }
   /* .banner2 {
     max-width: 1070px;
@@ -1115,8 +1116,8 @@ footer .footer-text {
     bottom: 10%;
   }
   .banner2 {
-    /* width: 90%; */
-    width: 100%;
+    width: 90%;
+    /* width: 100%; */
   }
   .h2-banner {
     margin: 20px 20px 40px 0px;
@@ -1132,6 +1133,10 @@ footer .footer-text {
     margin: 20px 20px 40px 20px;
     font-size: 32px;
     line-height: 34px;
+    text-align: left !important;
+  }
+  .banner2-text {
+    padding: 20px 0px;
   }
   .faq-section {
     padding: 40px;
